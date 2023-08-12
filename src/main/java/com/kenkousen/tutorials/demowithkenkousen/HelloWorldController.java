@@ -12,6 +12,7 @@ public class HelloWorldController {
     public String getpage(@RequestParam() String name,Model model){
 model.addAttribute("user", name);
 System.out.println("hey");
+model.addAttribute("user", name);
         return "hello";
 
     }
