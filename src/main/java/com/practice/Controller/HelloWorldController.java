@@ -1,4 +1,4 @@
-package com.kenkousen.tutorials.demowithkenkousen;
+package com.practice.Controller;
 
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
@@ -9,7 +9,7 @@ import org.springframework.web.bind.annotation.RequestParam;
 public class HelloWorldController {
 
     @GetMapping("/hello")
-    public String getpage(@RequestParam() String name,Model model){
+    public String getpage(@RequestParam(required = false) String name,Model model){
 model.addAttribute("user", name);
 System.out.println("hey");
 model.addAttribute("user", name);
